@@ -1,0 +1,30 @@
+{
+  "name": "poc-node-monorepo",
+  "repository": "git@github.com:gabrielhjs/poc-node-monorepo.git",
+  "license": "MIT",
+  "scripts": {
+    "add": "git add .",
+    "commit": "cz",
+    "version": "npx lerna version --conventional-commits"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.8.3",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lerna": "^7.3.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "private": true
+}
